@@ -12,7 +12,6 @@ from shop.recommender import Recommender
 
 # paypal通知，支付成功后更新订单支付状态，给用户发送有发票的邮件
 def payment_notification(sender, **kwargs):
-    print('xixi')
     ipn_obj = sender
     if ipn_obj.payment_status == ST_PP_COMPLETED:
         # payment was successful

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'paypal.standard.ipn',
     'payment',
+    'alipay',
     'shop',
     'cart',
     'orders',
@@ -161,6 +162,9 @@ PAYPAL_TEST = True
 REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
 REDIS_DB = 1
+
+APP_PRIVATE_KEY_PATH = os.path.join(BASE_DIR, 'payment/utils/app_private_key.pem')
+ALIPAY_PUBLIC_KEY_PATH = os.path.join(BASE_DIR, 'payment/utils/alipay_public_key.pem')
 
 # PARLER_LANGUAGES = {
 # 	None: (

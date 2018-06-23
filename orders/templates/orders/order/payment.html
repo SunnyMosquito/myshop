@@ -1,0 +1,13 @@
+{% extends "shop/base.html" %}
+
+{% load i18n %}
+
+{% block title %}
+    {% trans 'Checkout' %}
+{% endblock %}
+
+{% block content %}
+    <h1>选择一个支付方式</h1>
+    <a href="{% url 'payment:paypal_process' %}">paypal</a>
+    <a href="{% url 'payment:alipay_process' %}">alipay</a>
+{% endblock %}

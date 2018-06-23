@@ -66,7 +66,9 @@ def order_create(request):
             # launch asynchronous task，order_created是task里的函数
             order_created.delay(order.id)  # set the order in the session
             request.session['order_id'] = order.id  # redirect to the payment
-            return redirect(reverse('payment:process'))
+            # return redirect(reverse('payment:process'))
+            return render(request,
+                          'orders/order/payment.html')
 
     # get请求创建订单
     else:
